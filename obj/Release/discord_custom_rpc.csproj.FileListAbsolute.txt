@@ -6,7 +6,6 @@ C:\Users\Kilian\source\repos\discord_custom_rpc\discord_custom_rpc\bin\Release\N
 C:\Users\Kilian\source\repos\discord_custom_rpc\discord_custom_rpc\bin\Release\DiscordRPC.pdb
 C:\Users\Kilian\source\repos\discord_custom_rpc\discord_custom_rpc\bin\Release\DiscordRPC.xml
 C:\Users\Kilian\source\repos\discord_custom_rpc\discord_custom_rpc\bin\Release\Newtonsoft.Json.xml
-C:\Users\Kilian\source\repos\discord_custom_rpc\discord_custom_rpc\obj\Release\discord_custom_rpc.csprojAssemblyReference.cache
 C:\Users\Kilian\source\repos\discord_custom_rpc\discord_custom_rpc\obj\Release\discord_custom_rpc.Properties.Resources.resources
 C:\Users\Kilian\source\repos\discord_custom_rpc\discord_custom_rpc\obj\Release\discord_custom_rpc.RPC_Form.resources
 C:\Users\Kilian\source\repos\discord_custom_rpc\discord_custom_rpc\obj\Release\discord_custom_rpc.csproj.GenerateResource.cache
