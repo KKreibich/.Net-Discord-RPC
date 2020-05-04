@@ -16,15 +16,18 @@ namespace discord_custom_rpc
         private Dictionary<string, string> appids = new Dictionary<string, string>();
         private string curAID = "crpc";
         private RPC myrpc = new RPC();
+        public delegate void setUsrLabel(String ltext);
+        public setUsrLabel adelegate;
         public RPC_Form()
         {
+            adelegate = new setUsrLabel(updateLabelMethod);
             appids.Add("rl", "478676645725732879");
             appids.Add("prog", "478734568854388737");
             appids.Add("sleep", "485439731824459811");
             appids.Add("crpc", "706818636127666229");
-            myrpc.Init(appids[curAID]);
-            myrpc.setRPC("In Menu", "Choosing an Activity.", null);
             InitializeComponent();
+            myrpc.Init(appids[curAID], lb_usr);
+            myrpc.setRPC("In Menu", "Choosing an Activity.", null);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,7 +48,7 @@ namespace discord_custom_rpc
                         curAID = "rl";
                         myrpc.removeRPC();
                         myrpc = new RPC();
-                        myrpc.Init(appids[curAID]);
+                        myrpc.Init(appids[curAID], lb_usr);
                         myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
                     }
                     break;
@@ -59,7 +62,7 @@ namespace discord_custom_rpc
                         curAID = "prog";
                         myrpc.removeRPC();
                         myrpc = new RPC();
-                        myrpc.Init(appids[curAID]);
+                        myrpc.Init(appids[curAID], lb_usr);
                         myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
                     }
                         break;
@@ -73,7 +76,7 @@ namespace discord_custom_rpc
                         curAID = "sleep";
                         myrpc.removeRPC();
                         myrpc = new RPC();
-                        myrpc.Init(appids[curAID]);
+                        myrpc.Init(appids[curAID], lb_usr);
                         myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
                     }
                     break;
@@ -87,7 +90,7 @@ namespace discord_custom_rpc
                         curAID = "crpc";
                         myrpc.removeRPC();
                         myrpc = new RPC();
-                        myrpc.Init(appids[curAID]);
+                        myrpc.Init(appids[curAID], lb_usr);
                         myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
                     }
                     break;
@@ -99,6 +102,10 @@ namespace discord_custom_rpc
         private void btn_rem_Click(object sender, EventArgs e)
         {
             myrpc.removeRPC();
+        }
+        public void updateLabelMethod(String ltext)
+        {
+            lb_usr.Text = ltext;
         }
     }
 }

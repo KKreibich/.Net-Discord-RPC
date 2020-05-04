@@ -39,6 +39,7 @@
             this.version_label = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_rem = new System.Windows.Forms.Button();
+            this.lb_usr = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,11 +111,11 @@
             // 
             this.version_label.AutoSize = true;
             this.version_label.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.version_label.Location = new System.Drawing.Point(340, 399);
+            this.version_label.Location = new System.Drawing.Point(379, 399);
             this.version_label.Name = "version_label";
-            this.version_label.Size = new System.Drawing.Size(105, 13);
+            this.version_label.Size = new System.Drawing.Size(52, 13);
             this.version_label.TabIndex = 8;
-            this.version_label.Text = "v0.1.1-alpha (debug)";
+            this.version_label.Text = "v0.2-beta";
             // 
             // pictureBox1
             // 
@@ -135,11 +136,21 @@
             this.btn_rem.UseVisualStyleBackColor = true;
             this.btn_rem.Click += new System.EventHandler(this.btn_rem_Click);
             // 
+            // lb_usr
+            // 
+            this.lb_usr.AutoSize = true;
+            this.lb_usr.Location = new System.Drawing.Point(13, 396);
+            this.lb_usr.Name = "lb_usr";
+            this.lb_usr.Size = new System.Drawing.Size(92, 13);
+            this.lb_usr.TabIndex = 12;
+            this.lb_usr.Text = "No user detected.";
+            // 
             // RPC_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 421);
+            this.ClientSize = new System.Drawing.Size(443, 421);
+            this.Controls.Add(this.lb_usr);
             this.Controls.Add(this.btn_rem);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.version_label);
@@ -150,7 +161,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tb_state);
             this.Controls.Add(this.tb_detail);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "RPC_Form";
             this.Text = "Custom Discord-RPC";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -171,6 +184,7 @@
         private System.Windows.Forms.Label version_label;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_rem;
+        private System.Windows.Forms.Label lb_usr;
     }
 }
 
