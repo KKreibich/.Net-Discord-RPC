@@ -36,27 +36,29 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.version_label = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_rem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_detail
             // 
-            this.tb_detail.Location = new System.Drawing.Point(93, 194);
+            this.tb_detail.Location = new System.Drawing.Point(110, 291);
             this.tb_detail.Name = "tb_detail";
             this.tb_detail.Size = new System.Drawing.Size(240, 20);
             this.tb_detail.TabIndex = 0;
             // 
             // tb_state
             // 
-            this.tb_state.Location = new System.Drawing.Point(93, 220);
+            this.tb_state.Location = new System.Drawing.Point(110, 317);
             this.tb_state.Name = "tb_state";
             this.tb_state.Size = new System.Drawing.Size(240, 20);
             this.tb_state.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(173, 246);
+            this.button1.Location = new System.Drawing.Point(230, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -70,8 +72,9 @@
             this.gameBox.Items.AddRange(new object[] {
             "Real Life",
             "Programming",
-            "Sleeping"});
-            this.gameBox.Location = new System.Drawing.Point(93, 167);
+            "Sleeping",
+            "CustomRPC"});
+            this.gameBox.Location = new System.Drawing.Point(110, 264);
             this.gameBox.Name = "gameBox";
             this.gameBox.Size = new System.Drawing.Size(240, 21);
             this.gameBox.TabIndex = 3;
@@ -79,7 +82,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 174);
+            this.label1.Location = new System.Drawing.Point(69, 271);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 4;
@@ -88,7 +91,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 197);
+            this.label2.Location = new System.Drawing.Point(69, 294);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 5;
@@ -97,27 +100,49 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 223);
+            this.label3.Location = new System.Drawing.Point(69, 320);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "State";
             // 
+            // version_label
+            // 
+            this.version_label.AutoSize = true;
+            this.version_label.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.version_label.Location = new System.Drawing.Point(340, 399);
+            this.version_label.Name = "version_label";
+            this.version_label.Size = new System.Drawing.Size(105, 13);
+            this.version_label.TabIndex = 8;
+            this.version_label.Text = "v0.1.1-alpha (debug)";
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::discord_custom_rpc.Properties.Resources.cdrpc_big_transparent1;
-            this.pictureBox1.Location = new System.Drawing.Point(86, 4);
+            this.pictureBox1.Image = global::discord_custom_rpc.Properties.Resources.bullshit_meter;
+            this.pictureBox1.Location = new System.Drawing.Point(58, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(247, 157);
-            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.Size = new System.Drawing.Size(329, 246);
+            this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            // 
+            // btn_rem
+            // 
+            this.btn_rem.Location = new System.Drawing.Point(149, 343);
+            this.btn_rem.Name = "btn_rem";
+            this.btn_rem.Size = new System.Drawing.Size(75, 23);
+            this.btn_rem.TabIndex = 11;
+            this.btn_rem.Text = "Remove";
+            this.btn_rem.UseVisualStyleBackColor = true;
+            this.btn_rem.Click += new System.EventHandler(this.btn_rem_Click);
             // 
             // RPC_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 310);
+            this.ClientSize = new System.Drawing.Size(457, 421);
+            this.Controls.Add(this.btn_rem);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.version_label);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -143,7 +168,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label version_label;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_rem;
     }
 }
 

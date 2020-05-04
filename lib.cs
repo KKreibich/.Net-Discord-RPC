@@ -8,18 +8,19 @@ using System.Threading.Tasks;
 
 namespace discord_custom_rpc
 {
-	class RealLifeRPC
+	class RPC
 	{
 		public DiscordRpcClient client;
-		public void Init()
+		public void Init(string appID)
 		{
-			client = new DiscordRpcClient("478676645725732879");
+			client = new DiscordRpcClient(appID);
 			client.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
 			client.Initialize();
 		}
 
 		public void setRPC(string details, string state, Assets assets)
 		{
+			client.ClearPresence();
 			client.SetPresence(new RichPresence()
 			{
 				Details = details,
@@ -27,47 +28,14 @@ namespace discord_custom_rpc
 				Assets = assets
 			});
 		}
-	}
 
-	class ProgrammingRPC
-	{
-		public DiscordRpcClient client;
-		public void Init()
+		public void removeRPC()
 		{
-			client = new DiscordRpcClient("478734568854388737");
-			client.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
-			client.Initialize();
-		}
-
-		public void setRPC(string details, string state, Assets assets)
-		{
-			client.SetPresence(new RichPresence()
+			if (client.IsInitialized)
 			{
-				Details = details,
-				State = state,
-				Assets = assets
-			});
-		}
-	}
-
-	class sleepRPC
-	{
-		public DiscordRpcClient client;
-		public void Init()
-		{
-			client = new DiscordRpcClient("485439731824459811");
-			client.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
-			client.Initialize();
-		}
-
-		public void setRPC(string details, string state, Assets assets)
-		{
-			client.SetPresence(new RichPresence()
-			{
-				Details = details,
-				State = state,
-				Assets = assets
-			});
+				client.ClearPresence();
+				client.Deinitialize();
+			}
 		}
 	}
 }	

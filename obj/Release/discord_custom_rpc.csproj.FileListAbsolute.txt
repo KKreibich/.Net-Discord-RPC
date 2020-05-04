@@ -13,3 +13,4 @@ C:\Users\Kilian\source\repos\discord_custom_rpc\discord_custom_rpc\obj\Release\d
 C:\Users\Kilian\source\repos\discord_custom_rpc\discord_custom_rpc\obj\Release\discord_custom_rpc.csproj.CopyComplete
 C:\Users\Kilian\source\repos\discord_custom_rpc\discord_custom_rpc\obj\Release\discord_custom_rpc.exe
 C:\Users\Kilian\source\repos\discord_custom_rpc\discord_custom_rpc\obj\Release\discord_custom_rpc.pdb
+C:\Users\Kilian\source\repos\discord_custom_rpc\discord_custom_rpc\obj\Release\discord_custom_rpc.csprojAssemblyReference.cache

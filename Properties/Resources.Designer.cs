@@ -63,19 +63,9 @@ namespace discord_custom_rpc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cdrpc_big_transparent {
+        internal static System.Drawing.Bitmap bullshit_meter {
             get {
-                object obj = ResourceManager.GetObject("cdrpc_big_transparent", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cdrpc_big_transparent1 {
-            get {
-                object obj = ResourceManager.GetObject("cdrpc_big_transparent1", resourceCulture);
+                object obj = ResourceManager.GetObject("bullshit_meter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

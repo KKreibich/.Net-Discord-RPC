@@ -13,8 +13,17 @@ namespace discord_custom_rpc
 {
     public partial class RPC_Form : Form
     {
+        private Dictionary<string, string> appids = new Dictionary<string, string>();
+        private string curAID = "crpc";
+        private RPC myrpc = new RPC();
         public RPC_Form()
         {
+            appids.Add("rl", "478676645725732879");
+            appids.Add("prog", "478734568854388737");
+            appids.Add("sleep", "485439731824459811");
+            appids.Add("crpc", "706818636127666229");
+            myrpc.Init(appids[curAID]);
+            myrpc.setRPC("In Menu", "Choosing an Activity.", null);
             InitializeComponent();
         }
 
@@ -28,23 +37,68 @@ namespace discord_custom_rpc
             switch (gameBox.Text)
             {
                 case "Real Life":
-                    RealLifeRPC rlrpc = new RealLifeRPC();
-                    rlrpc.Init();
-                    rlrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                    if (curAID.Equals("rl") && myrpc.client.IsInitialized)
+                    {
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                    } else
+                    {
+                        curAID = "rl";
+                        myrpc.removeRPC();
+                        myrpc = new RPC();
+                        myrpc.Init(appids[curAID]);
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                    }
                     break;
                 case "Programming":
-                    ProgrammingRPC rrpc = new ProgrammingRPC();
-                    rrpc.Init();
-                    rrpc.setRPC(tb_detail.Text, tb_state.Text, null);
-                    break;
+                    if (curAID.Equals("prog") && myrpc.client.IsInitialized)
+                    {
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                    }
+                    else
+                    {
+                        curAID = "prog";
+                        myrpc.removeRPC();
+                        myrpc = new RPC();
+                        myrpc.Init(appids[curAID]);
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                    }
+                        break;
                 case "Sleeping":
-                    sleepRPC lrpc = new sleepRPC();
-                    lrpc.Init();
-                    lrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                    if (curAID.Equals("sleep")&&myrpc.client.IsInitialized)
+                    {
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                    }
+                    else
+                    {
+                        curAID = "sleep";
+                        myrpc.removeRPC();
+                        myrpc = new RPC();
+                        myrpc.Init(appids[curAID]);
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                    }
+                    break;
+                case "CustomRPC":
+                    if (curAID.Equals("crpc") && myrpc.client.IsInitialized)
+                    {
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                    }
+                    else
+                    {
+                        curAID = "crpc";
+                        myrpc.removeRPC();
+                        myrpc = new RPC();
+                        myrpc.Init(appids[curAID]);
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                    }
                     break;
                 default:
                     break;
             }
+        }
+
+        private void btn_rem_Click(object sender, EventArgs e)
+        {
+            myrpc.removeRPC();
         }
     }
 }
