@@ -113,9 +113,9 @@
             this.version_label.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.version_label.Location = new System.Drawing.Point(379, 399);
             this.version_label.Name = "version_label";
-            this.version_label.Size = new System.Drawing.Size(52, 13);
+            this.version_label.Size = new System.Drawing.Size(59, 13);
             this.version_label.TabIndex = 8;
-            this.version_label.Text = "v0.2-beta";
+            this.version_label.Text = "v1.0-stable";
             // 
             // pictureBox1
             // 

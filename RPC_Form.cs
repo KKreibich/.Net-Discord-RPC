@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DiscordRPC;
 
 namespace discord_custom_rpc
 {
@@ -27,7 +28,7 @@ namespace discord_custom_rpc
             appids.Add("crpc", "706818636127666229");
             InitializeComponent();
             myrpc.Init(appids[curAID], lb_usr);
-            myrpc.setRPC("In Menu", "Choosing an Activity.", null);
+            myrpc.setRPC("In Menu", "Choosing an Activity.", new Assets() { LargeImageKey = "cdrpc-logo"});
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -83,7 +84,7 @@ namespace discord_custom_rpc
                 case "CustomRPC":
                     if (curAID.Equals("crpc") && myrpc.client.IsInitialized)
                     {
-                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "cdrpc-logo" });
                     }
                     else
                     {
@@ -91,7 +92,7 @@ namespace discord_custom_rpc
                         myrpc.removeRPC();
                         myrpc = new RPC();
                         myrpc.Init(appids[curAID], lb_usr);
-                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "cdrpc-logo" });
                     }
                     break;
                 default:
