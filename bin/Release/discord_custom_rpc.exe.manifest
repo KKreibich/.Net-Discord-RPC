@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="discord_custom_rpc.exe" size="264680">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="discord_custom_rpc.exe" size="1589224">
       <assemblyIdentity name="discord_custom_rpc" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>C2LMgrFmh74jX/CPbBFe8I7Nmieu8xxLEOB/cdeAzbE=</dsig:DigestValue>
+        <dsig:DigestValue>b3xEsAX//5E8wP2sHblCATOL2eowyNaMMXqoTaP5HmY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

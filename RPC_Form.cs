@@ -17,17 +17,14 @@ namespace discord_custom_rpc
         private Dictionary<string, string> appids = new Dictionary<string, string>();
         private string curAID = "crpc";
         private RPC myrpc = new RPC();
-        public delegate void setUsrLabel(String ltext);
-        public setUsrLabel adelegate;
         public RPC_Form()
         {
-            adelegate = new setUsrLabel(updateLabelMethod);
             appids.Add("rl", "478676645725732879");
             appids.Add("prog", "478734568854388737");
             appids.Add("sleep", "485439731824459811");
             appids.Add("crpc", "706818636127666229");
             InitializeComponent();
-            myrpc.Init(appids[curAID], lb_usr);
+            myrpc.Init(appids[curAID], lb_usr, lb_detail);
             myrpc.setRPC("In Menu", "Choosing an Activity.", new Assets() { LargeImageKey = "cdrpc-logo"});
         }
 
@@ -49,7 +46,7 @@ namespace discord_custom_rpc
                         curAID = "rl";
                         myrpc.removeRPC();
                         myrpc = new RPC();
-                        myrpc.Init(appids[curAID], lb_usr);
+                        myrpc.Init(appids[curAID], lb_usr, lb_detail);
                         myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "irl-logo" });
                     }
                     break;
@@ -63,7 +60,7 @@ namespace discord_custom_rpc
                         curAID = "prog";
                         myrpc.removeRPC();
                         myrpc = new RPC();
-                        myrpc.Init(appids[curAID], lb_usr);
+                        myrpc.Init(appids[curAID], lb_usr, lb_detail);
                         myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "prog-logo" });
                     }
                         break;
@@ -77,7 +74,7 @@ namespace discord_custom_rpc
                         curAID = "sleep";
                         myrpc.removeRPC();
                         myrpc = new RPC();
-                        myrpc.Init(appids[curAID], lb_usr);
+                        myrpc.Init(appids[curAID], lb_usr, lb_detail);
                         myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "sleep-logo" });
                     }
                     break;
@@ -91,7 +88,7 @@ namespace discord_custom_rpc
                         curAID = "crpc";
                         myrpc.removeRPC();
                         myrpc = new RPC();
-                        myrpc.Init(appids[curAID], lb_usr);
+                        myrpc.Init(appids[curAID], lb_usr, lb_detail);
                             myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "cdrpc-logo" });  
                     }
                     break;
@@ -104,9 +101,15 @@ namespace discord_custom_rpc
         {
             myrpc.removeRPC();
         }
-        public void updateLabelMethod(String ltext)
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            lb_usr.Text = ltext;
+            lib.showWeb("https://github.com/KKreibich/.Net-Discord-RPC");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            lib.showWeb("https://github.com/KKreibich/.Net-Discord-RPC/releases");
         }
     }
 }

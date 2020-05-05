@@ -140,6 +140,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cdrpc.ico" />
+    <None Include="Resources\crdc_text.png" />
+    <None Include="Resources\crdc_background.png" />
+    <None Include="Resources\discord.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
