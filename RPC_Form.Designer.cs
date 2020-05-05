@@ -111,7 +111,7 @@
             // 
             this.version_label.AutoSize = true;
             this.version_label.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.version_label.Location = new System.Drawing.Point(379, 399);
+            this.version_label.Location = new System.Drawing.Point(372, 395);
             this.version_label.Name = "version_label";
             this.version_label.Size = new System.Drawing.Size(59, 13);
             this.version_label.TabIndex = 8;
@@ -139,7 +139,7 @@
             // lb_usr
             // 
             this.lb_usr.AutoSize = true;
-            this.lb_usr.Location = new System.Drawing.Point(13, 396);
+            this.lb_usr.Location = new System.Drawing.Point(11, 395);
             this.lb_usr.Name = "lb_usr";
             this.lb_usr.Size = new System.Drawing.Size(92, 13);
             this.lb_usr.TabIndex = 12;
@@ -149,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 416);
+            this.ClientSize = new System.Drawing.Size(443, 417);
             this.Controls.Add(this.lb_usr);
             this.Controls.Add(this.btn_rem);
             this.Controls.Add(this.pictureBox1);

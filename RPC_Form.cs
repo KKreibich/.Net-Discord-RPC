@@ -43,20 +43,20 @@ namespace discord_custom_rpc
                 case "Real Life":
                     if (curAID.Equals("rl") && myrpc.client.IsInitialized)
                     {
-                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "irl-logo"});
                     } else
                     {
                         curAID = "rl";
                         myrpc.removeRPC();
                         myrpc = new RPC();
                         myrpc.Init(appids[curAID], lb_usr);
-                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "irl-logo" });
                     }
                     break;
                 case "Programming":
                     if (curAID.Equals("prog") && myrpc.client.IsInitialized)
                     {
-                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "prog-logo"});
                     }
                     else
                     {
@@ -64,13 +64,13 @@ namespace discord_custom_rpc
                         myrpc.removeRPC();
                         myrpc = new RPC();
                         myrpc.Init(appids[curAID], lb_usr);
-                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "prog-logo" });
                     }
                         break;
                 case "Sleeping":
                     if (curAID.Equals("sleep")&&myrpc.client.IsInitialized)
                     {
-                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "sleep-logo" });
                     }
                     else
                     {
@@ -78,13 +78,13 @@ namespace discord_custom_rpc
                         myrpc.removeRPC();
                         myrpc = new RPC();
                         myrpc.Init(appids[curAID], lb_usr);
-                        myrpc.setRPC(tb_detail.Text, tb_state.Text, null);
+                        myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "sleep-logo" });
                     }
                     break;
                 case "CustomRPC":
                     if (curAID.Equals("crpc") && myrpc.client.IsInitialized)
                     {
-                        myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "cdrpc-logo" });
+                            myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "cdrpc-logo" });
                     }
                     else
                     {
@@ -92,7 +92,7 @@ namespace discord_custom_rpc
                         myrpc.removeRPC();
                         myrpc = new RPC();
                         myrpc.Init(appids[curAID], lb_usr);
-                        myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "cdrpc-logo" });
+                            myrpc.setRPC(tb_detail.Text, tb_state.Text, new Assets() { LargeImageKey = "cdrpc-logo" });  
                     }
                     break;
                 default:
